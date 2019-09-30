@@ -4,9 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StatestikAspITPlannerOle"
+        xmlns:dbc="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="AspIT Planner Statistic" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" >
+            <Grid>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                
+                <StackPanel Grid.Column="0">
+                    <ComboBox Grid.Column="0" x:Name="studentpicker" Margin="10 10"/>
+                    <DatePicker Grid.Column="0" x:Name="startdate" Margin="10 10"/>
+                    <DatePicker Grid.Column="0" x:Name="enddate" Margin="10 10"/>
+
+                </StackPanel>
+            
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="1" x:Name="Close" Margin="10 10" Content="Close" Click="Close_Click"/>
+                <Button Grid.Column="0" x:Name="BGetdata" Margin="10 10" Content="Getdata" Click="BGetdata_Click" />
+                
+            </Grid>
+        </StackPanel>
         
     </Grid>
 </Window>
